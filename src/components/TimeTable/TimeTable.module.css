@@ -1,0 +1,24 @@
+.headerTitle {
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 26px;
+}
+
+.buttons {
+    background-color: #257183;
+    border: 1px solid #ffffff;
+    border-top: none;
+    color: #f2efe8;
+    text-transform: uppercase;
+    transition: 2s;
+    cursor: pointer;
+    width: 150px;
+    min-height:50px;
+}
+
+.buttonsWrapper {
+    display: flex;
+    justify-content: space-evenly;
+}

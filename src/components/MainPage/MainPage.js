@@ -1,7 +1,5 @@
 import React from "react";
 import Animation from "../../animation";
-import logo from '../../img/img_logo.png';
-import ReactFullpage from '@fullpage/react-fullpage';
 
 
 const MainPage = () => {
