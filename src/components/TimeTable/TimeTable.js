@@ -9,11 +9,6 @@ const TimeTable = () => {
         '10703216', '10703217', '10703218', '10703219', '10703220',
     ]);
 
-    const handleShowTimeTable = (event) => {
-        debugger
-        console.log(event.target)
-    };
-
     return (
         <React.Fragment>
            <h4 className={style.headerTitle}>Выберите группу</h4>
