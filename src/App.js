@@ -36,7 +36,7 @@ const App = () => {
             <Route exact path={'/timetable'}>
                 <TimeTable/>
             </Route>
-            <Route exact path="/timetable/group/:id" render={(props) => <GroupTimeTable {...props}/>}/>
+            <Route exact path="/timetable/group/:subgroup/:id" render={(props) => <GroupTimeTable {...props}/>}/>
         </Router>
 
     )

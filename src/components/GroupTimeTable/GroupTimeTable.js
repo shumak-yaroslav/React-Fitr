@@ -20,7 +20,7 @@ const GroupTimeTable = (props) => {
                     return (
                         <React.Fragment>
                             <tr>
-                                {item.subjects[0].firstWeak.secondGroup[idx].name === sub.name ? <t<td rowSpan={2}>{sub.name} {sub.teacher}</td> :
+                                {item.subjects[0].firstWeak.secondGroup[idx].name === sub.name ? <td rowSpan={2}>{sub.name} {sub.teacher}</td> :
                                     <React.Fragment>
                                         <td>{sub.time}</td>
                                         <td>{sub.name} {sub.teacher}</td>
@@ -34,27 +34,115 @@ const GroupTimeTable = (props) => {
                     )
 
                 })
-                const lesson = item.subjects[0].firstWeak.secondGroup.map((subb, idxx) =>  {
+                const week = localStorage.getItem('week');
+                const group = localStorage.getItem('group');
+                if (week === '1' && group === '1') {
+                    const lesson = item.subjects[0].firstWeak.firstGroup.map((subb, idxx) =>  {
+                        return (
+                            <React.Fragment>
+                                <tr>
+                                    <td>{subb.time}</td>
+                                    <td>{subb.name} {subb.teacher}</td>
+
+
+                                </tr>
+
+                            </React.Fragment>
+                        )
+
+                    })
                     return (
                         <React.Fragment>
+
                             <tr>
-                                <td>{subb.name} {subb.teacher}</td>
+                                <td>{item.day}</td>
+                                <td>{lesson.time}</td>
+                                {/*<td>{lessons}</td>*/}
+                                <td>{lesson}</td>
                             </tr>
 
                         </React.Fragment>
                     )
+                } else if (week === '1' && group === '2'){
+                    const lesson = item.subjects[0].firstWeak.secondGroup.map((subb, idxx) =>  {
+                        return (
+                            <React.Fragment>
+                                <tr>
+                                    <td>{subb.time}</td>
+                                    <td>{subb.name} {subb.teacher}</td>
 
-                })
-                return (
-                    <React.Fragment>
-                        <tr>
-                            <td>{item.day}</td>
-                            <td>{lessons}</td>
-                            <td>{lesson}</td>
-                        </tr>
 
-                    </React.Fragment>
+
+                                </tr>
+
+                            </React.Fragment>
+                        )
+
+                    })
+                    return (
+                        <React.Fragment>
+
+                            <tr>
+                                <td>{item.day}</td>
+                                {/*<td>{lessons}</td>*/}
+                                <td>{lesson}</td>
+                            </tr>
+
+                        </React.Fragment>
                     )
+                } else if (week === '2' && group === '1'){
+                    const lesson = item.subjects[0].secondWeak.firstGroup.map((subb, idxx) =>  {
+                        return (
+                            <React.Fragment>
+                                <tr>
+                                    <td>{subb.time}</td>
+                                    <td>{subb.name} {subb.teacher}</td>
+
+
+                                </tr>
+
+                            </React.Fragment>
+                        )
+
+                    })
+                    return (
+                        <React.Fragment>
+
+                            <tr>
+                                <td>{item.day}</td>
+                                {/*<td>{lessons}</td>*/}
+                                <td>{lesson}</td>
+                            </tr>
+
+                        </React.Fragment>
+                    )
+                } else if (week === '2' && group === '2'){
+                    const lesson = item.subjects[0].secondWeak.secondGroup.map((subb, idxx) =>  {
+                        return (
+                            <React.Fragment>
+                                <tr>
+                                    <td>{subb.time}</td>
+                                    <td>{subb.name} {subb.teacher}</td>
+
+                                </tr>
+
+                            </React.Fragment>
+                        )
+
+                    })
+                    return (
+                        <React.Fragment>
+
+                            <tr>
+                                <td>{item.day}</td>
+                                {/*<td>{lessons}</td>*/}
+                                <td>{lesson}</td>
+                            </tr>
+
+                        </React.Fragment>
+                    )
+                }
+
             })}
         </table>
     )

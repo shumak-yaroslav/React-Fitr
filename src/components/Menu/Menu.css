@@ -13,6 +13,13 @@
     width: 35%;
 }
 
+.wrapper .current-week {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+    color: #ffffff;
+}
+
 .wrapper .page-title {
     display: flex;
     justify-content: space-around;
